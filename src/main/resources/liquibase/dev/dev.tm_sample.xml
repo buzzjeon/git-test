@@ -1,0 +1,18 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <changeSet author="Ferdy Gome" id="DEV_TM_SAMPLE_001">
+        <loadData file="liquibase/dev/dev.tm_sample.csv" separator="," tableName="tm_sample">
+            <column name="NAME"   type="STRING"/>
+            <column name="AGE"    type="NUMERIC"/>
+            <column name="PHONE"  type="STRING"/>
+            <column name="GENDER" type="STRING"/>
+            <column name="EMAIL"  type="STRING"/>
+            <column name="BIRTH"  type="DATE"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>
+

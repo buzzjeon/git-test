@@ -1,0 +1,69 @@
+$line    : 1px solid $col-gray-l1;
+
+/*****************************************/
+/* [BOX] Box component */
+/*------------------------------------*/
+/* [BOX] Search box */
+.h-search-box {
+    /* [BOX][SEARCH] Values */
+    $item-height  : 40px;
+    $hori-padding : 5px;
+    $vert-padding : 5px;
+
+    /* [BOX][SEARCH] General style */
+    & {width: 100px;width: 100%;border: $line;position:relative;margin-bottom:36px;}
+
+    /* [BOX][SEARCH] Button section */
+    .h-search-box__button {position:absolute;top:calc(100% + 10px);right:0px;text-align:right;vertical-align: bottom;}
+    .h-search-box__button > button {height:26px;width:80px;}
+
+
+    /* [BOX][SEARCH] Row style */
+    .h-search-row {display:flex;}
+    .h-search-row + .h-search-row {border-top:$line;}
+
+    /* [BOX][SEARCH] Item style :: general */
+    .h-search-item {display:flex;align-content: center;overflow:hidden;height:$item-height;}
+    .h-search-item + .h-search-item {border-left:$line;}
+    .h-search-item__label {flex: 0 0 160px;padding:0 $hori-padding;line-height:$item-height;}
+    .h-search-item__compo {flex: 1 1 0;display:flex;align-items: center;padding-left:($hori-padding * 2);padding-right:$hori-padding;}
+
+    /* [BOX][SEARCH] Item style :: hide label */
+    .h-search-item--no-label .h-search-item__label {display:none;}
+    .h-search-item--no-label .h-search-item__compo {padding:0 $hori-padding;}
+
+    /* [BOX][SEARCH] Item style :: component height */
+    .h-search-item__compo input {height:($item-height - $vert-padding * 2);border-radius:0px;border:$line;
+            padding: 0 $hori-padding;font-size:14px;}
+    .h-search-item__compo input:first-child {margin-left:(-$hori-padding - 1px);}
+}
+
+/* [BOX] Form box */
+.h-form-box {
+    /* [BOX][FORM] Values */
+    $item-height  : 36px;
+    $hori-padding : 3px;
+    $vert-padding : 5px;
+
+    /* [BOX][FORM] General */
+    & {border:$line;display:flex;flex-wrap:wrap;}
+
+    /* [BOX][FORM] Item style */
+    .h-form-item {display:flex;align-content: center;overflow:hidden;height:$item-height;border-bottom:$line;margin-bottom:-1px;}
+    .h-form-item + .h-search-item {border-left:$line;}
+    .h-form-item__label {flex: 0 0 160px;padding:0 $hori-padding;line-height:$item-height;}
+    .h-form-item__compo {flex: 1 1 0;display:flex;align-items: center;padding-left:($hori-padding * 2);padding-right:$hori-padding;}
+
+    /* [BOX][FORM] No label */
+    .h-form-item--no-label .h-form-item__label {display:none;}
+    .h-form-item--no-label .h-form-item__compo {padding:0 $hori-padding;}
+
+    /* [BOX][FORM] Required */
+    .h-form-item--required .h-form-item__label::after { content:'*';margin-left:3px; color:$col-red; }
+
+    /* [BOX][FORM] Item style :: component input */
+    .h-form-item__compo input {height:($item-height - $vert-padding * 2);border-radius:0px;border:$line;
+        padding: 0 $hori-padding;font-size:14px;}
+    .h-form-item__compo input:first-child {margin-left:(-$hori-padding - 1px);}
+}
+/* [BOX] Box component END */

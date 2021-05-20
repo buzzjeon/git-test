@@ -1,0 +1,12 @@
+# build 경로
+/target/
+/dist/
+/node_modules/
+package-lock.json
+#/dist/
+
+# IDE 설정
+.classpath
+.project
+/.setting/
+.scannerwork

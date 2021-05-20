@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+                            http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <!-- Create schema-->
+    <include file="liquibase/create/create.cm_menu.json"/>
+    <include file="liquibase/create/create.tm_sample.json"/>
+
+    <!-- Initialize system -->
+    <include file="liquibase/init/init.cm_menu.json"/>
+
+    <!-- Dev(temp) data -->
+    <include file="liquibase/dev/dev.tm_sample.xml"/>
+</databaseChangeLog>

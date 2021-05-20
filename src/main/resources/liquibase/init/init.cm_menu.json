@@ -1,0 +1,105 @@
+{"databaseChangeLog":[
+    {"changeSet" : { "id" : "INIT_CM_MENU_001", "author" : "Ferdy Gome", "changes" : [
+        {"insert":{"tableName":"CM_MENU","columns":[
+            {"column":{"name":"id"       ,"value":"page"}},
+            {"column":{"name":"parent_id","value":""}},
+            {"column":{"name":"url"      ,"value":"/page"}},
+            {"column":{"name":"name"     ,"value":"Page dev guide"}},
+            {"column":{"name":"sub_title","value":""}},
+            {"column":{"name":"seq"      ,"value":"1"}}
+        ]}},
+        {"insert":{"tableName":"CM_MENU","columns":[
+            {"column":{"name":"id"       ,"value":"page.div1"}},
+            {"column":{"name":"parent_id","value":"page"}},
+            {"column":{"name":"url"      ,"value":""}},
+            {"column":{"name":"name"     ,"value":""}},
+            {"column":{"name":"sub_title","value":"Layout"}},
+            {"column":{"name":"seq"      ,"value":"1"}}
+        ]}},
+        {"insert":{"tableName":"CM_MENU","columns":[
+            {"column":{"name":"id"       ,"value":"page.simple"}},
+            {"column":{"name":"parent_id","value":"page"}},
+            {"column":{"name":"url"      ,"value":"/page/layout/simple"}},
+            {"column":{"name":"name"     ,"value":"Simple layout"}},
+            {"column":{"name":"sub_title","value":""}},
+            {"column":{"name":"seq"      ,"value":"2"}}
+        ]}},
+        {"insert":{"tableName":"CM_MENU","columns":[
+            {"column":{"name":"id"       ,"value":"page.vert"}},
+            {"column":{"name":"parent_id","value":"page"}},
+            {"column":{"name":"url"      ,"value":"/page/layout/vertical"}},
+            {"column":{"name":"name"     ,"value":"Vertical layout"}},
+            {"column":{"name":"sub_title","value":""}},
+            {"column":{"name":"seq"      ,"value":"3"}}
+        ]}},
+        {"insert":{"tableName":"CM_MENU","columns":[
+            {"column":{"name":"id"       ,"value":"page.fixed"}},
+            {"column":{"name":"parent_id","value":"page"}},
+            {"column":{"name":"url"      ,"value":"/page/layout/fixedtb"}},
+            {"column":{"name":"name"     ,"value":"Fixed Top/Bot"}},
+            {"column":{"name":"sub_title","value":""}},
+            {"column":{"name":"seq"      ,"value":"4"}}
+        ]}},
+        {"insert":{"tableName":"CM_MENU","columns":[
+            {"column":{"name":"id"       ,"value":"page.toplr"}},
+            {"column":{"name":"parent_id","value":"page"}},
+            {"column":{"name":"url"      ,"value":"/page/layout/toplr"}},
+            {"column":{"name":"name"     ,"value":"Top/L-R layout"}},
+            {"column":{"name":"sub_title","value":""}},
+            {"column":{"name":"seq"      ,"value":"5"}}
+        ]}},
+        {"insert":{"tableName":"CM_MENU","columns":[
+            {"column":{"name":"id"       ,"value":"page.div2"}},
+            {"column":{"name":"parent_id","value":"page"}},
+            {"column":{"name":"url"      ,"value":""}},
+            {"column":{"name":"name"     ,"value":""}},
+            {"column":{"name":"sub_title","value":"Box sample"}},
+            {"column":{"name":"seq"      ,"value":"6"}}
+        ]}},
+        {"insert":{"tableName":"CM_MENU","columns":[
+            {"column":{"name":"id"       ,"value":"page.search"}},
+            {"column":{"name":"parent_id","value":"page"}},
+            {"column":{"name":"url"      ,"value":"/page/boxes/searchbox"}},
+            {"column":{"name":"name"     ,"value":"Search box"}},
+            {"column":{"name":"sub_title","value":""}},
+            {"column":{"name":"seq"      ,"value":"6"}}
+        ]}},
+        {"insert":{"tableName":"CM_MENU","columns":[
+            {"column":{"name":"id"       ,"value":"page.form"}},
+            {"column":{"name":"parent_id","value":"page"}},
+            {"column":{"name":"url"      ,"value":"/page/boxes/formbox"}},
+            {"column":{"name":"name"     ,"value":"Form box"}},
+            {"column":{"name":"sub_title","value":""}},
+            {"column":{"name":"seq"      ,"value":"7"}}
+        ]}},
+        {"insert":{"tableName":"CM_MENU","columns":[
+            {"column":{"name":"id"       ,"value":"sample"}},
+            {"column":{"name":"parent_id","value":""}},
+            {"column":{"name":"url"      ,"value":"/sample"}},
+            {"column":{"name":"name"     ,"value":"Page sample"}},
+            {"column":{"name":"sub_title","value":""}},
+            {"column":{"name":"seq"      ,"value":"3"}}
+        ]}},
+        {"insert":{"tableName":"CM_MENU","columns":[
+            {"column":{"name":"id"       ,"value":"sample.myfisrtpage"}},
+            {"column":{"name":"parent_id","value":"sample"}},
+            {"column":{"name":"url"      ,"value":"/myfirstpage"}},
+            {"column":{"name":"name"     ,"value":"1st. Page sample"}},
+            {"column":{"name":"seq"      ,"value":"1"}}
+        ]}},
+        {"insert":{"tableName":"CM_MENU","columns":[
+            {"column":{"name":"id"       ,"value":"sample.mysecondpage"}},
+            {"column":{"name":"parent_id","value":"sample"}},
+            {"column":{"name":"url"      ,"value":"/mysecondpage"}},
+            {"column":{"name":"name"     ,"value":"2nd. Page(for Axios)"}},
+            {"column":{"name":"seq"      ,"value":"2"}}
+        ]}},
+        {"insert":{"tableName":"CM_MENU","columns":[
+            {"column":{"name":"id"       ,"value":"sample.mythirdpage"}},
+            {"column":{"name":"parent_id","value":"sample"}},
+            {"column":{"name":"url"      ,"value":"/mythirdpage"}},
+            {"column":{"name":"name"     ,"value":"3rd. Page(Comps.)"}},
+            {"column":{"name":"seq"      ,"value":"3"}}
+        ]}}
+    ]}}
+]}

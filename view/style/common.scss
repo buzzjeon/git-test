@@ -1,0 +1,148 @@
+/*****************************************/
+/* [COMMON] Sub-style import */
+@import './reset.scss';
+@import './color.scss';
+@import './mixin.scss';
+@import './boxes.scss';
+
+/*****************************************/
+/* [COMMON] Variables */
+/* [COMMON] Variables :: color */
+$font-normal  : $col-dark;
+$font-reverse : $col-white;
+$font-highlight: $col-secondary;
+$font-highlight-reverse: $col-yellow;
+$font-disable : $col-gray-l1;
+$font-hover   : $col-prim-d3;
+
+$line-1px    : 1px solid $col-gray-l1;
+$line-select : 5px solid $col-tertiary;
+
+$back-normal : $col-white;
+$back-dark   : $col-gray-l3;
+$back-hover  : $col-prim-l4;
+$back-prim   : $col-prim;
+
+
+/*****************************************/
+/* [COMMON] Global style */
+#honeybee {
+    min-width:1200px;color:$font-normal;
+}
+#honeybee .code {font-family: 'd2coding';}
+#honeybee article.code {background:$col-dark;color:$col-white;padding:10px;margin:10px 0;display:inline-block}
+
+/* [COMMON] Normal button */
+#honeybee button {background:#FFF;border:$line-1px;cursor:pointer;}
+#honeybee button:hover {background:$col-prim;color:$col-white;border-color:$col-prim;font-weight:bold;}
+
+/*****************************************/
+/* [FRAME] Page frame style */
+$frame-head-height : 50px;
+$frame-left-width  : 250px;
+$frame-foot-height : 30px;
+/* [FRAME] head frame */
+.head-frame{
+    & { position:fixed;top:0;left:0;right:0;height:$frame-head-height;
+        background:$back-prim;color:$font-reverse;}
+    /* [FRAME] head frame :: LOGO */
+    .head-frame__logo{ position:absolute;top:0;left:0;bottom:0;
+        line-height:$frame-head-height;font-size:20px;
+        padding-left:20px;font-weight:bold;}
+    .head-frame__logo:first-letter{color: $font-highlight-reverse;font-size:28px;}
+    /* [FRAME] head frame :: 상단 메뉴 */
+    .head-frame__menus {position:absolute;top:0;bottom:0;left:$frame-left-width;font-size:0px;}
+    .head-frame__menu {display:inline-block;padding:0 20px;cursor:pointer;font-size:16px;font-weight:bold;color:#FFF;
+        height:$frame-head-height;line-height:$frame-head-height;user-select:none;}
+    .head-frame__menu:hover {color:$font-hover;}
+    .head-frame__menu--selected {border-bottom:$line-select}
+    /* [FRAME] head frame :: 상단 메뉴 */
+    .head-frame__action{position:absolute;top:0;bottom:0;right:0;line-height:$frame-head-height;}
+}
+
+/* [FRAME] left frame */
+.left-frame{
+    & {position:fixed;top:$frame-head-height;bottom:$frame-foot-height;left:0;width:$frame-left-width;
+        border-right:$line-1px;}
+
+    $menu-height:50px;
+
+    #left-menu-list{
+        & {}
+        /* [MENU] 메뉴 아이템 */
+        .left-menu {height:$menu-height;line-height:$menu-height;
+            padding-left:15px;font-size:16px;cursor:pointer;user-select:none;}
+        .left-menu:hover {background:$col-prim-l3;}
+        .left-menu .fas {width:20px;text-align:center;}
+        /* [MENU] 메뉴 아이템::활성화 */
+        .left-menu--active {color:$col-prim-d2;font-weight:bold;}
+        /* [MENU] 메뉴 구분선 */
+        .left-menu-divider {margin:0;height:1px;background:$col-gray-l2;}
+        /* [MENU] 메뉴 소제목 */
+        .left-menu-sub-title {font-size:16px;padding:10px;font-weight:bold;}
+        .left-menu + .left-menu-sub-title {border-top:1px solid $col-gray-l2;}
+    }
+}
+
+/* [FRAME] contents */
+.body-frame {
+    & { position:fixed;top:$frame-head-height;bottom:$frame-foot-height;left:$frame-left-width;right:0;
+        overflow:auto;padding:0 20px;}
+}
+
+/* [FRAME] footer */
+.foot-frame {
+    & { position:fixed;bottom:0;left:0;right:0;
+        height:$frame-foot-height;background:$back-dark;}
+    .foot-copylight {color:$font-normal;line-height:$frame-foot-height;font-size:12px;padding-left:10px;}
+}
+/* [FRAME] Page frame style END */
+
+
+
+
+/*****************************************/
+/* [PAGE] page style */
+.h-page{
+    /* [PAGE] Page contents section */
+    $title-margin-top : 10px;
+    $title-height : 40px;
+
+    /* [PAGE] General */
+    & {}
+
+    /* [PAGE] Contents section */
+    .h-page__contents {position:absolute;top:60px;bottom:20px;right:20px;left:20px;overflow:auto;display:flex;flex-wrap:wrap;
+        width:calc(100% - 40px);}
+
+    /* [PAGE] Title */
+    .title-area {height:$title-height;line-height:$title-height;margin-top: $title-margin-top;}
+    .title-area > h1 {font-size:24px;}
+}
+/* [PAGE] page style END */
+
+
+
+
+/*****************************************/
+/* [AREA] Area style */
+.h-area {
+    /* [AREA] General */
+    & {font-size:1rem;overflow:auto;}
+
+    /* [AREA] Sub option */
+    .h-area--full-page {width:100%;height:100%;}
+    .h-area--left, .h-area--right {display:inline-block;}
+
+    /* [AREA] Bordered area */
+    &.h-area--bordered {border:1px solid $col-gray-l1;}
+}
+/* [AREA][DEV] DEV mode area */
+.--dev .h-area {border: 5px dashed #ccc;padding:20px;}
+
+
+
+
+
+
+

@@ -1,0 +1,17 @@
+html, body {margin:0px;padding:0px;font-size:14px;}
+
+*, *:before, *:after {box-sizing:border-box;}
+
+/* list style*/
+ul {padding:0;}
+li {list-style: none;}
+
+/* Headline */
+h1,h2,h3,h4,h5,h6 {margin:0;}
+
+/* For some component*/
+body, input, textarea
+    {font-family: 'Gamja Flower','Montserrat','Indie Flower', sans-serif;}
+
+/* For some component :: button */
+button:focus {outline:0;}

@@ -1,0 +1,16 @@
+{"databaseChangeLog":[
+    {"changeSet" : { "id" : "CREATE_TM_SAMPLE", "author" : "ferdy", "changes" : [
+        {"createTable" : {
+            "tableName" : "TM_SAMPLE",
+            "columns" : [
+                {"column":{"name":"NAME"  ,"type":"varchar(50)",
+                    "constraints":{"primaryKey":true,"nullable":false}}},
+                {"column":{"name":"AGE"   ,"type":"bigint"}},
+                {"column":{"name":"PHONE" ,"type":"varchar(20)"}},
+                {"column":{"name":"GENDER","type":"varchar(1)"}},
+                {"column":{"name":"EMAIL" ,"type":"varchar(100)"}},
+                {"column":{"name":"BIRTH" ,"type":"datetime"}}
+            ]
+        }}
+    ]}}
+]}
